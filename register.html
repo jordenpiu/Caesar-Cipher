@@ -1,0 +1,37 @@
+<!--registration html, references for wtf from tutorialspoint-->
+
+
+
+
+{% extends "layout2.html" %}
+{% block body %}
+
+
+<div class = "form-begin">
+
+  <h1>Register</h1>
+  <p id = "news">It is necessary to fill every field provided*</p>
+<br>
+{% from "_formhelpers.html" import render_field %}
+<form method=post action="/register/">
+<dl>
+  {{render_field(form.name)}}
+  {{render_field(form.department)}}
+  {{render_field(form.semester)}}
+  {{render_field(form.rollno)}}
+  {{render_field(form.gender)}}
+</dl>
+<p><input type=submit value=Register></p>
+</form>
+
+{% if error %}
+<p class="error"><strong>INTERNAL Error:</strong>{{error}}</p>
+
+
+{% endif %}
+
+
+
+
+</div>
+{% endblock %}

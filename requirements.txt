@@ -1,0 +1,3 @@
+1. flask
+2. wtforms
+create a new folder name Templates inside the folder where app.py is and need to paste all html files inside Templates.
